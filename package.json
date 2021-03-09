@@ -1,0 +1,19 @@
+{
+  "name": "probable-potato",
+  "version": "1.0.0",
+  "description": "blah blah blah",
+  "main": "coingecko.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mprestonsparks/probable-potato.git"
+  },
+  "author": "@mprestonsparks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mprestonsparks/probable-potato/issues"
+  },
+  "homepage": "https://github.com/mprestonsparks/probable-potato#readme"
+}

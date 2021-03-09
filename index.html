@@ -6,18 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="coingecko.js"></script> 
 <body>
-    <script>
-        getData();
-
-
-        async function getData() {
-            const api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin'
-            const response = await fetch(api_url);
-            // const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin');
-            const data = await response.json();
-            console.log(data);
-        };
-    </script>
+    <!--Button Insert-->
+    <input type="button" onclick="Insert_Data()" value="Insert" />
+    <!--Table-->
+    <table id="myTable">
+    <tr>
+        <th>Full Name</th>
+        <th>Age</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </table>   
 </body>
 </html>
