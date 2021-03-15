@@ -1,45 +1,26 @@
 
-// get data from Coingecko API
-getData();
-async function getData() {
-    const api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin'
-    const response = await fetch(api_url);
-    const data = await response.json();
-    console.log(data);
-};
-
-//Insert data function to table
-function Insert_Data() {
-    var table = document.getElementById("myTable");
-    var rows = table.querySelectorAll('tr');
-    console.log(rows)
-    for (let i = 1; i < rows.length; i++) {
-        rows[i].children[0].textContent = a[i-1].name
-        rows[i].children[1].textContent = a[i-1].age
-        rows[i].children[2].textContent = a[i-1].hometown
-    }
-};
-
-// placeholder table
-var a = [
-    {
-        name: "Micheal",
-        age: 20,
-        hometown: "New York"
-    },
-    {
-        name: "Santino",
-        age: 25,
-        hometown: "Los Angeles"
-    },
-    {
-        name: "Fredo",
-        age: 29,
-        hometown: "California"
-    },
-    {
-        name: "Hagen",
-        age: 28,
-        hometown: "Long Beach"
-    }
+var coin = [
+    {"id":"bitcoin"},
+    {"id":"ethereum"},    
 ];
+
+getData();
+// get data from Coingecko API
+async function getData() {
+        for (var i = 0; i < coin.length; i++) {
+        
+        // const api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin';
+        const api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin';
+        const response = await fetch(api_url);
+        const data = await response.json();
+        console.log(coin[0].id)
+        console.log(data);
+
+        for (var i = 0; i < data.length; i++) {
+            tr = $('<tr/>');
+            tr.append("<td>" + data[i].symbol + "</td>");
+            tr.append("<td>" + data[i].ath + "</td>");
+            $('table').append(tr);
+        };
+    };
+};
