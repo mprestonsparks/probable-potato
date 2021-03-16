@@ -12,7 +12,7 @@ var coin = [
 
 // -------------------------------------------------
 // ** WRAP THE WHOLE FUNCTION IN THIS CALLBACK
-=const slowAndSteady = new Promise(function(resolve, reject) {
+const slowAndSteady = new Promise(function(resolve, reject) {
     setTimeout(function() {
         console.log('Slow and steady wins the race.');
         resolve();
